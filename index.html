@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesdash - The Pure Electric Cockpit</title>
+    <style>
+        :root {
+            --bg-color: #0a0c10;
+            --surface-color: #14171f;
+            --surface-hover: #1c212c;
+            --border-color: #232834;
+            --text-primary: #f0f3f8;
+            --text-secondary: #9da7b8;
+            --accent-color: #00d2ff;
+            --accent-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 0 40px 0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--accent-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+        }
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px auto;
+        }
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 210, 255, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 210, 255, 0.4);
+        }
+        .btn-secondary {
+            background: var(--surface-color);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+        .btn-secondary:hover {
+            background: var(--surface-hover);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 60px 0;
+        }
+        .feature-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        .support-section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 36px;
+            margin: 60px 0;
+        }
+        .support-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h4 {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .disclaimer {
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: #636e72;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">PRO ELECTRIC VEHICLE TELEMETRY</div>
+            <h1>Tesdash</h1>
+            <p class="subtitle">The ultra-low-latency, customizable driver display for your electric vehicle. Direct Bluetooth encryption with zero cloud servers.</p>
+            <div class="cta-group">
+                <a href="#support" class="btn btn-secondary">Support &amp; FAQ</a>
+                <a href="privacy.html" class="btn btn-secondary">Privacy Policy</a>
+                <a href="terms.html" class="btn btn-secondary">Terms &amp; Safety</a>
+            </div>
+        </header>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <h3>⚡️ Direct BLE Latency</h3>
+                <p>Pairs directly with vehicle Bluetooth. Instantaneous 10 Hz speedometer and real-time regenerative braking telemetry.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Zero Cloud Tracking</h3>
+                <p>100% on-device cryptography (ECDH secp256r1 + AES-GCM). Your telemetry, trip data, and locations never touch external servers.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🏎️ Apex &amp; Modular Cockpit</h3>
+                <p>Multi-page configurable layouts. Choose between Classic, Apex Pro, Diamond, Curved, and Circular dials.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🏝️ Live Activities &amp; Dynamic Island</h3>
+                <p>Glance at your live speed and battery level in the Dynamic Island while multitasking or using other navigation apps.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Drive Receipt &amp; Trip Stats</h3>
+                <p>Automatic post-drive trip summaries showing duration, distance, Wh/km efficiency, and calculated fuel savings.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌡️ Thermal Smart Scaling</h3>
+                <p>Engineered for dashboard windshield mounts. Intelligently throttles rendering under direct sun exposure to prevent overheating.</p>
+            </div>
+        </section>
+
+        <section class="support-section" id="support">
+            <h2>Support &amp; Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h4>How do I pair Tesdash with my vehicle?</h4>
+                <p>Make sure Bluetooth is enabled on your iPhone. Launch Tesdash, enter your vehicle's 17-character VIN, and tap Connect. Bring your physical Tesla key card to the center console card reader when prompted to authorize the secure pairing key.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I try Tesdash without being in my car?</h4>
+                <p>Yes! Simply tap <strong>"Start Demo"</strong> on the welcome screen. Tesdash will launch in fully interactive Demo Mode with simulated live speed, battery usage, navigation, and G-force metrics.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Does Tesdash drain my phone battery?</h4>
+                <p>Tesdash is optimized for automotive efficiency with native SwiftUI rendering and proactive thermal management. However, because the screen remains on while driving, we recommend keeping your device connected to a wireless or USB charger.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Need assistance or found a bug?</h4>
+                <p>Contact developer support directly at <a href="mailto:gokhangokun@gmail.com" style="color: var(--accent-color);">gokhangokun@gmail.com</a>. We reply promptly to all driver inquiries.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                <a href="privacy.html">Privacy Policy</a> &bull;
+                <a href="terms.html">Terms of Use (EULA)</a> &bull;
+                <a href="mailto:gokhangokun@gmail.com">Contact Support</a>
+            </p>
+            <p class="disclaimer">
+                Tesdash is an independent application developed by Gokhan Gokun. It is not affiliated with, endorsed by, authorized, or sponsored by Tesla, Inc. Tesla, Model S, Model 3, Model X, Model Y, and Cybertruck are registered trademarks of Tesla, Inc.
+            </p>
+            <p style="margin-top: 12px;">&copy; 2026 Gokhan Gokun. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

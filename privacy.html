@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tesdash</title>
+    <style>
+        :root {
+            --bg-color: #0d0f12;
+            --surface-color: #171a21;
+            --border-color: #272c38;
+            --text-primary: #f0f3f8;
+            --text-secondary: #9da7b8;
+            --accent-color: #00d2ff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px 24px;
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 32px;
+            color: var(--accent-color);
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .highlight-box {
+            background-color: var(--surface-color);
+            border-left: 4px solid var(--accent-color);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-primary);
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <div class="date">Last updated: September 30, 2026</div>
+        </header>
+
+        <div class="highlight-box">
+            <p><strong>Core Privacy Commitment:</strong> Tesdash does NOT collect, sell, or transmit your personal data, location, or vehicle telemetry to any remote server or cloud database. All processing happens 100% locally on your iOS device.</p>
+        </div>
+
+        <h2>1. Information We Process</h2>
+        <p>Tesdash is designed with a strict zero-telemetry, privacy-first architecture:</p>
+        <ul>
+            <li><strong>Vehicle Telemetry:</strong> When paired with your vehicle via Bluetooth Low Energy (BLE), Tesdash reads speed, battery level, estimated range, tire pressures, power usage (kW), gear state, climate status, and door closure states. This data is processed strictly in memory on your device to update your dashboard gauges and is never transmitted off your device.</li>
+            <li><strong>Location Data (GPS):</strong> Tesdash uses your device's GPS location solely to compute instantaneous vehicle speed, heading, trip distance, and to render local 3D chase camera navigation using Apple MapKit. Location data is never logged to external servers or used for user tracking.</li>
+            <li><strong>Vehicle Identification Number (VIN):</strong> Your VIN is stored locally in your device's encrypted Keychain / Secure Storage to facilitate automatic BLE reconnection to your vehicle. It is never transmitted to us or third parties.</li>
+        </ul>
+
+        <h2>2. Bluetooth Low Energy & Cryptography</h2>
+        <p>Direct vehicle communications utilize end-to-end local cryptography conforming to Tesla's official Vehicle Command protocol (ECDH secp256r1 key agreement and AES-GCM authenticated encryption). Pairing keys and session tokens remain exclusively inside your device's Secure Enclave / Keychain.</p>
+
+        <h2>3. Third-Party Services & Integrations</h2>
+        <ul>
+            <li><strong>Apple In-App Purchases (StoreKit 2):</strong> When you purchase subscriptions or lifetime licenses, transactions are handled directly by Apple Inc. We do not receive or store your payment details, credit card numbers, or billing address.</li>
+            <li><strong>Apple Music & iTunes Search API:</strong> If enabled, Tesdash displays media metadata (track title, artist) from your device's music player. Album art queries are anonymously fetched from public Apple iTunes lookup endpoints without sending any personal identifying information.</li>
+            <li><strong>MapKit:</strong> Map tiles, reverse geocoding, and routing services are provided directly by Apple MapKit under Apple's Privacy Policy.</li>
+        </ul>
+
+        <h2>4. Data Retention & Deletion</h2>
+        <p>Because Tesdash does not operate remote user accounts or databases, we store no personal data on external servers. You can permanently delete all locally stored vehicle pairing keys, nicknames, and dashboard preferences at any time by navigating to <em>Settings &gt; Reset Dashboard Configuration</em> or by deleting the app from your device.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Tesdash does not knowingly collect or solicit personal information from children under the age of 13. The application is strictly an automotive auxiliary tool intended for licensed motor vehicle operators.</p>
+
+        <h2>6. Third-Party Trademarks Disclaimer</h2>
+        <p>Tesdash is an independent product created by Gokhan Gokun and is not affiliated with, endorsed by, authorized, or sponsored by Tesla, Inc. Tesla, Model S, Model 3, Model X, Model Y, and Cybertruck are registered trademarks of Tesla, Inc.</p>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions or concerns regarding this Privacy Policy or your data privacy, please contact:</p>
+        <p><strong>Developer:</strong> Gokhan Gokun<br>
+        <strong>Email:</strong> <a href="mailto:gokhangokun@gmail.com">gokhangokun@gmail.com</a><br>
+        <strong>Website:</strong> <a href="https://gokhangokun.github.io/tesdashdoc/">https://gokhangokun.github.io/tesdashdoc/</a></p>
+
+        <footer>
+            &copy; 2026 Gokhan Gokun. All rights reserved. Tesdash is an independent application.
+        </footer>
+    </div>
+</body>
+</html>
