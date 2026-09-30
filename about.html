@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Tesdash - Real-time Electric Cockpit</title>
+    <style>
+        :root {
+            --bg-color: #0a0c10;
+            --surface-color: #14171f;
+            --surface-hover: #1c212c;
+            --border-color: #232834;
+            --text-primary: #f0f3f8;
+            --text-secondary: #9da7b8;
+            --accent-color: #00d2ff;
+            --accent-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0 30px 0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--accent-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 28px auto;
+        }
+        .content-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 36px;
+            margin-bottom: 32px;
+        }
+        .content-card h2 {
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .content-card p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+        .feature-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        .feature-item strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+        .feature-item span {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .cta-box {
+            text-align: center;
+            padding: 36px;
+            background: linear-gradient(180deg, rgba(0, 210, 255, 0.05) 0%, rgba(20, 23, 31, 0.9) 100%);
+            border: 1px solid rgba(0, 210, 255, 0.25);
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin: 6px;
+        }
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0, 210, 255, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
+        }
+        .btn-secondary {
+            background: var(--surface-color);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .disclaimer {
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: #636e72;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">ABOUT &bull; FEATURES &bull; PRIVACY FIRST</div>
+            <h1>About Tesdash</h1>
+            <p class="subtitle">An independent, privacy-centric driver companion designed for electric vehicles. Fast, local, and engineered for true performance driving.</p>
+        </header>
+
+        <section class="content-card">
+            <h2>🏎️ Why We Built Tesdash</h2>
+            <p>Modern electric vehicles have incredible central screens, but essential real-time driving information—speed, regenerative braking, blind-spot closures, and trip metrics—often demands glancing away from the road ahead.</p>
+            <p>Tesdash was built by passionate electric vehicle drivers to deliver a customizable, ultra-responsive digital instrument cluster right in the driver's natural line of sight. Inspired by classic Porsche 911 3-dial cockpits and BMW M aerodynamic styling, Tesdash provides the tactile intimacy of motorsport gauges combined with next-generation electric vehicle telemetry.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>⚡️ Core Highlights &amp; Features</h2>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <strong>10 Hz Real-Time Telemetry</strong>
+                    <span>Direct Bluetooth Low Energy communication with 100 ms update cycles. No server roundtrips or cellular lag.</span>
+                </li>
+                <li class="feature-item">
+                    <strong>100% On-Device Privacy</strong>
+                    <span>Zero cloud servers. Vehicle key negotiation happens via hardware ECDH secp256r1 + AES-GCM on your device.</span>
+                </li>
+                <li class="feature-item">
+                    <strong>Apex 3-Dial Cockpit</strong>
+                    <span>Porsche-inspired analog-digital dial arrangement with hero speedometer, companion battery, and dynamic navigation.</span>
+                </li>
+                <li class="feature-item">
+                    <strong>Multi-Card Modular Dashboards</strong>
+                    <span>Six bespoke luxury card designs: Contemporary OEM, Prism Diamond, Aero Blade, Curved Horizon, and OLED Ghost.</span>
+                </li>
+                <li class="feature-item">
+                    <strong>Post-Drive Summary &amp; Savings</strong>
+                    <span>Comprehensive trip receipts displaying distance, duration, Wh/km efficiency, and calculated fuel savings.</span>
+                </li>
+                <li class="feature-item">
+                    <strong>Thermal Defense &amp; Smart Scaling</strong>
+                    <span>Windshield mount protection that throttles rendering dynamically under summer sun to avoid iPhone overheating.</span>
+                </li>
+                <li class="feature-item">
+                    <strong>Dynamic Island &amp; Live Activities</strong>
+                    <span>Lock-screen and Dynamic Island widgets keep your live speed and battery level visible while running other apps.</span>
+                </li>
+                <li class="feature-item">
+                    <strong>Driver Fatigue Monitor</strong>
+                    <span>Intelligent driving duration tracking with gentle, non-intrusive break reminders every 2 hours on long highway trips.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>🛡️ Our Privacy Guarantee</h2>
+            <p>We believe automotive software should never monetize driver telemetry. Tesdash does not track your location, does not record your routes, and does not require user accounts. Your vehicle stays strictly between you and your car.</p>
+        </section>
+
+        <div class="cta-box">
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: #fff;">Experience Tesdash</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">Download on the App Store or explore documentation and support.</p>
+            <a href="index.html" class="btn btn-primary">Home &amp; FAQ</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy Policy</a>
+            <a href="terms.html" class="btn btn-secondary">Terms of Service</a>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Home</a> &bull;
+                <a href="about.html">About &amp; Features</a> &bull;
+                <a href="privacy.html">Privacy Policy</a> &bull;
+                <a href="terms.html">Terms of Use (EULA)</a> &bull;
+                <a href="mailto:gokhangokun@gmail.com">Contact Support</a>
+            </p>
+            <p class="disclaimer">
+                Tesdash is an independent application developed by Gokhan Gokun. It is not affiliated with, endorsed by, authorized, or sponsored by Tesla, Inc. Tesla, Model S, Model 3, Model X, Model Y, and Cybertruck are registered trademarks of Tesla, Inc.
+            </p>
+            <p style="margin-top: 12px;">&copy; 2026 Gokhan Gokun. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
