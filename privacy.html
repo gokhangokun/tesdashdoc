@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tesdash</title>
+    <style>
+        :root {
+            --bg-color: #0d0f12;
+            --surface-color: #171a21;
+            --border-color: #272c38;
+            --text-primary: #f0f3f8;
+            --text-secondary: #9da7b8;
+            --accent-color: #00d2ff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px 24px;
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        h2 {
+            font-size: 1.35rem;
+            margin-top: 32px;
+            color: var(--accent-color);
+        }
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            color: var(--text-primary);
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .highlight-box {
+            background-color: var(--surface-color);
+            border-left: 4px solid var(--accent-color);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-primary);
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <div class="date">Last updated: October 4, 2026</div>
+        </header>
+
+        <div class="highlight-box">
+            <p><strong>Core Privacy Commitment:</strong> Tesdash does NOT operate remote user accounts, sell personal data, or store your vehicle telemetry on cloud servers. Vehicle communication occurs 100% locally via Bluetooth Low Energy between your iOS device and your vehicle.</p>
+        </div>
+
+        <h2>1. Information We Process Locally</h2>
+        <p>Tesdash is architected on a privacy-first, on-device model:</p>
+        <ul>
+            <li><strong>Vehicle Telemetry:</strong> When connected via direct Bluetooth Low Energy (BLE), Tesdash reads telemetry (speed, power consumption in kW, battery percentage, estimated range, tire pressures, cabin/ambient temperature, gear, door/closure states). This information is evaluated strictly in real-time memory to update the dashboard gauges and is never transmitted to any external server.</li>
+            <li><strong>Location Data (GPS):</strong> Tesdash accesses your device location while active or navigating to determine vehicle speed, compass heading, session trip distance, and to render local 3D chase camera navigation via Apple MapKit. Location data stays on your device.</li>
+            <li><strong>Vehicle Identification Number (VIN) & Pairing Keys:</strong> Your VIN and cryptographic pairing credentials are kept exclusively inside your iOS device's encrypted Keychain / Secure Storage.</li>
+        </ul>
+
+        <h2>2. Third-Party Services & In-App Advertising (Google AdMob)</h2>
+        <p>Tesdash offers both a Free ad-supported mode and a Pro (subscription / lifetime) ad-free mode:</p>
+        <ul>
+            <li><strong>Google AdMob & Google User Messaging Platform (UMP):</strong> In the free version of Tesdash, users may opt to watch rewarded ads to temporarily unlock Pro capabilities. We integrate the Google Mobile Ads SDK and Google User Messaging Platform (UMP) SDK. Google and its certified advertising partners may collect device identifiers (such as Apple's IDFA if permitted), IP address, and ad interaction metrics to serve and measure advertising. For details on how Google processes data, please visit <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Advertising Privacy & Terms</a>.</li>
+            <li><strong>Apple App Tracking Transparency (ATT):</strong> In accordance with Apple guidelines, Tesdash requests explicit tracking authorization before serving personalized ads. If you deny ATT authorization, only contextual, non-personalized ads are requested.</li>
+            <li><strong>Pro Users:</strong> Users with an active Pro subscription or Lifetime license never see ads. The advertising SDK is completely deactivated for Pro users.</li>
+            <li><strong>Apple WeatherKit:</strong> Weather data (temperature, condition, wind) is retrieved using Apple WeatherKit based on coarse device coordinates. Queries are anonymous and no personal identifiers are sent to Apple.</li>
+            <li><strong>Apple In-App Purchases (StoreKit 2):</strong> Financial transactions, subscriptions, and renewals are handled entirely by Apple Inc. Tesdash does not receive or store payment details.</li>
+            <li><strong>Apple Music & Album Art:</strong> Track metadata is read locally from your device's music player. Album artwork queries are sent anonymously to public Apple iTunes search endpoints without user identifiers.</li>
+        </ul>
+
+        <h2>3. General Data Protection Regulation (GDPR) Compliance (EEA / UK Users)</h2>
+        <p>If you reside in the European Economic Area (EEA), United Kingdom, or Switzerland, you are entitled to specific rights under the GDPR and UK GDPR regarding your personal data:</p>
+        <ul>
+            <li><strong>Legal Basis for Processing:</strong> We rely on your explicit consent for personalized advertising and tracking (obtained via the Google UMP consent banner and Apple ATT prompt), and legitimate interest for fraud prevention, security, and app performance.</li>
+            <li><strong>Right to Withdraw Consent:</strong> You have the right to withdraw or modify your consent choices at any time. You can easily reopen the consent management dialog directly within the app by navigating to:
+                <br><em>Settings &gt; Privacy Options</em>
+                <br>You may also reset your tracking authorization in iOS <em>Settings &gt; Privacy & Security &gt; Tracking</em>.</li>
+            <li><strong>Your Rights:</strong> You have the right to request access to, rectification of, or erasure of any personal data, as well as the right to data portability and the right to object to or restrict processing. Since Tesdash does not maintain external accounts or cloud databases, personal telemetry is deleted instantly upon clearing your app data or uninstalling the app.</li>
+            <li><strong>Supervisory Authority:</strong> You have the right to lodge a complaint with your local Data Protection Authority if you believe that our processing violates applicable data protection regulations.</li>
+        </ul>
+
+        <h2>4. Data Retention & Deletion</h2>
+        <p>Because Tesdash maintains no cloud database or user accounts, we retain zero user data remotely. You can wipe all local cached vehicle data, pairing keys, and saved settings at any time by selecting <em>Settings &gt; Reset Dashboard Configuration</em> or by deleting the app from your device.</p>
+
+        <h2>5. Vehicle Communication & Cryptography</h2>
+        <p>All direct communications with your vehicle adhere to Tesla's official Vehicle Command cryptography protocol, including Elliptic-Curve Diffie-Hellman (ECDH) P-256 key agreement and AES-GCM-128 authenticated encryption. Cryptographic keys are protected by the iOS Keychain with device-bound access control.</p>
+
+        <h2>6. Children's Privacy</h2>
+        <p>Tesdash is intended solely for licensed motor vehicle operators and does not knowingly collect any information from children under the age of 13 (or under 16 in certain jurisdictions).</p>
+
+        <h2>7. Independent Developer Disclaimer</h2>
+        <p>Tesdash is an independent auxiliary application developed by Gokhan Gokun. It is not affiliated with, endorsed by, authorized, or sponsored by Tesla, Inc. Tesla, Model S, Model 3, Model X, Model Y, and Cybertruck are registered trademarks of Tesla, Inc.</p>
+
+        <h2>8. Contact Information</h2>
+        <p>For any questions, requests, or privacy inquiries regarding this policy or Tesdash, please contact:</p>
+        <p>
+            <strong>Developer:</strong> Gokhan Gokun<br>
+            <strong>Email:</strong> <a href="mailto:gokhangokun@gmail.com">gokhangokun@gmail.com</a><br>
+            <strong>Support & Legal Portal:</strong> <a href="https://gokhangokun.github.io/tesdashdoc/">https://gokhangokun.github.io/tesdashdoc/</a>
+        </p>
+
+        <footer>
+            &copy; 2026 Gokhan Gokun. All rights reserved. Tesdash is an independent product.
+        </footer>
+    </div>
+</body>
+</html>
