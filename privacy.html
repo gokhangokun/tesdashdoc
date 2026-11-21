@@ -91,45 +91,40 @@
     <div class="container">
         <header>
             <h1>Privacy Policy</h1>
-            <div class="date">Last updated: October 4, 2026</div>
+            <div class="date">Last updated: November 21, 2026</div>
         </header>
 
         <div class="highlight-box">
-            <p><strong>Core Privacy Commitment:</strong> Tesdash does NOT operate remote user accounts, sell personal data, or store your vehicle telemetry on cloud servers. Vehicle communication occurs 100% locally via Bluetooth Low Energy between your iOS device and your vehicle.</p>
+            <p><strong>Core Privacy Commitment:</strong> Tesdash is completely ad-free and telemetry-free. Tesdash does NOT integrate third-party advertising or analytics SDKs, does NOT operate remote user accounts, and never uploads your vehicle telemetry or driving history to cloud servers. Vehicle communication occurs 100% locally via Bluetooth Low Energy between your iOS device and your vehicle.</p>
         </div>
 
         <h2>1. Information We Process Locally</h2>
         <p>Tesdash is architected on a privacy-first, on-device model:</p>
         <ul>
-            <li><strong>Vehicle Telemetry:</strong> When connected via direct Bluetooth Low Energy (BLE), Tesdash reads telemetry (speed, power consumption in kW, battery percentage, estimated range, tire pressures, cabin/ambient temperature, gear, door/closure states). This information is evaluated strictly in real-time memory to update the dashboard gauges and is never transmitted to any external server.</li>
-            <li><strong>Location Data (GPS):</strong> Tesdash accesses your device location while active or navigating to determine vehicle speed, compass heading, session trip distance, and to render local 3D chase camera navigation via Apple MapKit. Location data stays on your device.</li>
-            <li><strong>Vehicle Identification Number (VIN) & Pairing Keys:</strong> Your VIN and cryptographic pairing credentials are kept exclusively inside your iOS device's encrypted Keychain / Secure Storage.</li>
+            <li><strong>Vehicle Telemetry:</strong> When connected via direct Bluetooth Low Energy (BLE), Tesdash reads telemetry (speed, power consumption in kW, battery percentage, estimated range, tire pressures, cabin/ambient temperature, gear, door/closure states). This information is evaluated in real time on your device and optionally cached locally for drive summaries and Home Screen widgets—never transmitted to any external server.</li>
+            <li><strong>Location &amp; Motion Data (GPS &amp; Sensors):</strong> While active in the foreground and when Location permission is granted, Tesdash accesses your device's location, elevation, and motion sensors to calculate vehicle speed, compass heading, road grade, session distance, and 3D chase camera navigation via Apple MapKit. Your device's CoreLocation coordinate (at the precision you authorize in iOS Location settings—Precise or Approximate) is also passed to Apple WeatherKit when fetching optional local weather and wind conditions below.</li>
+            <li><strong>Local Media Artwork Matching (On-Device):</strong> Tesdash never sends song titles, artist names, or playback metadata to external servers or catalog search services. If you have granted Media &amp; Apple Music access on your iPhone, Tesdash inspects the local Music app's currently playing item strictly on-device and displays matching album artwork only when both track title and artist match the vehicle's active playback. Without permission or a verified local match, Tesdash displays a built-in source icon.</li>
+            <li><strong>Local Diagnostics (MetricKit):</strong> Performance and crash diagnostics provided by Apple's on-device MetricKit framework are logged locally via Apple's unified logging system for troubleshooting on your device and are never uploaded to external crash servers.</li>
+            <li><strong>Vehicle Identification Number (VIN) &amp; Pairing Keys:</strong> Your VIN and cryptographic pairing credentials are kept exclusively inside your iOS device's encrypted Keychain / Secure Storage.</li>
         </ul>
 
-        <h2>2. Third-Party Services & In-App Advertising (Google AdMob)</h2>
-        <p>Tesdash offers both a Free ad-supported mode and a Pro (subscription / lifetime) ad-free mode:</p>
+        <h2>2. External Network Requests &amp; Platform Services</h2>
+        <p>Tesdash operates offline-first and connects only to Apple platform services for the optional features below—without user accounts or tracking identifiers:</p>
         <ul>
-            <li><strong>Google AdMob & Google User Messaging Platform (UMP):</strong> In the free version of Tesdash, users may opt to watch rewarded ads to temporarily unlock Pro capabilities. We integrate the Google Mobile Ads SDK and Google User Messaging Platform (UMP) SDK. Google and its certified advertising partners may collect device identifiers (such as Apple's IDFA if permitted), IP address, and ad interaction metrics to serve and measure advertising. For details on how Google processes data, please visit <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Advertising Privacy & Terms</a>.</li>
-            <li><strong>Apple App Tracking Transparency (ATT):</strong> In accordance with Apple guidelines, Tesdash requests explicit tracking authorization before serving personalized ads. If you deny ATT authorization, only contextual, non-personalized ads are requested.</li>
-            <li><strong>Pro Users:</strong> Users with an active Pro subscription or Lifetime license never see ads. The advertising SDK is completely deactivated for Pro users.</li>
-            <li><strong>Apple WeatherKit:</strong> Weather data (temperature, condition, wind) is retrieved using Apple WeatherKit based on coarse device coordinates. Queries are anonymous and no personal identifiers are sent to Apple.</li>
-            <li><strong>Apple In-App Purchases (StoreKit 2):</strong> Financial transactions, subscriptions, and renewals are handled entirely by Apple Inc. Tesdash does not receive or store payment details.</li>
-            <li><strong>Apple Music & Album Art:</strong> Track metadata is read locally from your device's music player. Album artwork queries are sent anonymously to public Apple iTunes search endpoints without user identifiers.</li>
+            <li><strong>Current Weather &amp; Wind (Apple WeatherKit):</strong> When optional Pro weather or Aero &amp; Wind widgets are used in real driving mode and Location permission is granted, Tesdash requests current weather conditions (temperature, humidity, weather condition, wind speed, and wind direction) from Apple WeatherKit using the device's CoreLocation coordinates. Requests are shared across weather and wind widgets, throttled (at most once every 15 minutes or 5 km of travel), and are not performed in Demo Mode or in the background. No personal identifiers or VINs are included. See <a href="https://weatherkit.apple.com/legal-attribution.html" target="_blank" rel="noopener">Apple Weather Legal Attribution</a> for weather data source notices.</li>
+            <li><strong>Apple In-App Purchases (StoreKit 2):</strong> Optional Pro subscriptions, Lifetime unlocks, and voluntary developer tips are processed exclusively by Apple via StoreKit 2. Tesdash does not collect, process, or store payment card details.</li>
         </ul>
 
-        <h2>3. General Data Protection Regulation (GDPR) Compliance (EEA / UK Users)</h2>
-        <p>If you reside in the European Economic Area (EEA), United Kingdom, or Switzerland, you are entitled to specific rights under the GDPR and UK GDPR regarding your personal data:</p>
+        <h2>3. General Data Protection Regulation (GDPR / UK GDPR)</h2>
+        <p>If you reside in the European Economic Area (EEA), United Kingdom, or Switzerland:</p>
         <ul>
-            <li><strong>Legal Basis for Processing:</strong> We rely on your explicit consent for personalized advertising and tracking (obtained via the Google UMP consent banner and Apple ATT prompt), and legitimate interest for fraud prevention, security, and app performance.</li>
-            <li><strong>Right to Withdraw Consent:</strong> You have the right to withdraw or modify your consent choices at any time. You can easily reopen the consent management dialog directly within the app by navigating to:
-                <br><em>Settings &gt; Privacy Options</em>
-                <br>You may also reset your tracking authorization in iOS <em>Settings &gt; Privacy & Security &gt; Tracking</em>.</li>
-            <li><strong>Your Rights:</strong> You have the right to request access to, rectification of, or erasure of any personal data, as well as the right to data portability and the right to object to or restrict processing. Since Tesdash does not maintain external accounts or cloud databases, personal telemetry is deleted instantly upon clearing your app data or uninstalling the app.</li>
-            <li><strong>Supervisory Authority:</strong> You have the right to lodge a complaint with your local Data Protection Authority if you believe that our processing violates applicable data protection regulations.</li>
+            <li><strong>Zero Tracking &amp; Zero Ad Profiling:</strong> Tesdash does not collect personal data for advertising, does not track you across third-party apps or websites, and does not share personal data with data brokers.</li>
+            <li><strong>Your Rights &amp; Control:</strong> Because Tesdash stores vehicle pairing credentials, drive logs, and settings solely on your device, you maintain full control at all times. You may revoke Bluetooth, Location, Motion, or Media &amp; Apple Music permissions in iOS <em>Settings &gt; Privacy &amp; Security</em> or erase local data directly within Tesdash.</li>
+            <li><strong>Supervisory Authority:</strong> You have the right to lodge a complaint with your local Data Protection Authority if you have concerns about how your data is handled.</li>
         </ul>
 
-        <h2>4. Data Retention & Deletion</h2>
-        <p>Because Tesdash maintains no cloud database or user accounts, we retain zero user data remotely. You can wipe all local cached vehicle data, pairing keys, and saved settings at any time by selecting <em>Settings &gt; Reset Dashboard Configuration</em> or by deleting the app from your device.</p>
+        <h2>4. Data Retention &amp; Deletion</h2>
+        <p>Because Tesdash maintains no cloud database or user accounts, we retain zero user data remotely. You can delete cached driving history, remove your paired vehicle and Keychain credentials in the Garage view, wipe app history from Settings, or remove all local data by uninstalling Tesdash from your device.</p>
 
         <h2>5. Vehicle Communication & Cryptography</h2>
         <p>All direct communications with your vehicle adhere to Tesla's official Vehicle Command cryptography protocol, including Elliptic-Curve Diffie-Hellman (ECDH) P-256 key agreement and AES-GCM-128 authenticated encryption. Cryptographic keys are protected by the iOS Keychain with device-bound access control.</p>
